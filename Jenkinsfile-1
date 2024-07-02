@@ -5,8 +5,7 @@ pipeline {
       steps {
         input(message: 'Hello World!', ok: 'Submit')
         sh '''
-          fish -c "hostname"
-          fish -c "sw_vers"
+          sh 'fish -c "hostname; sw_vers"'
         '''
       }
     }
