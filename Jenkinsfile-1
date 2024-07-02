@@ -5,7 +5,8 @@ pipeline {
       steps {
         input(message: 'Hello World!', ok: 'Submit')
         sh '''
-          sh 'fish -c "hostname; sw_vers"'
+          hostname
+          cat /etc/redhat-release
         '''
       }
     }
