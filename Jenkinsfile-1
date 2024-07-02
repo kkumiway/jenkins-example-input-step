@@ -5,8 +5,8 @@ pipeline {
       steps {
         input(message: 'Hello World!', ok: 'Submit')
         sh '''
-          hostname
-          system_profiler SPSoftwareDataType
+          fish -c "hostname"
+          fish -c "sw_vers"
         '''
       }
     }
